@@ -8,7 +8,7 @@
     },
     "author": "Tami Zwick",
     "devDependencies": {
-        "gulp": "^4.0.2",
+        "gulp": "^3.9.1",
         "gulp-browserify": "^0.5.1",
         "gulp-coffee": "^3.0.3",
         "gulp-compass": "^2.1.0",
