@@ -14,8 +14,15 @@
         "gulp-compass": "^2.1.0",
         "gulp-concat": "^2.6.1",
         "gulp-connect": "^5.7.0",
+        "gulp-if": "^2.0.2",
+        "gulp-if-else": "^1.0.3",
+        "gulp-minify": "^3.1.0",
+        "gulp-uglify": "^3.0.2",
+        "gulp-uglify-es": "^1.0.4",
         "gulp-util": "^3.0.8",
         "jquery": "^3.4.1",
-        "mustache": "^3.0.1"
-    }
+        "mustache": "^3.0.1",
+        "uglify-js": "^3.6.0"
+    },
+    "dependencies": {}
 }

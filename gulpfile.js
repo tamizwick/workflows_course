@@ -4,7 +4,9 @@ var gulp = require('gulp'),
     browserify = require('gulp-browserify'),
     compass = require('gulp-compass'),
     concat = require('gulp-concat'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    gulpif = require('gulp-if'),
+    uglify = require('gulp-uglify-es').default;
 
 var env,
     coffeeSources,
@@ -44,12 +46,13 @@ gulp.task('coffee', function (done) {
             .on('error', gutil.log))
         .pipe(gulp.dest('components/scripts'));
     done();
-})
+});
 
 gulp.task('js', function (done) {
     gulp.src(jsSources)
         .pipe(concat('script.js'))
         .pipe(browserify())
+        .pipe(gulpif(env === 'production', uglify()))
         .pipe(gulp.dest(outputDir + 'js'))
         .pipe(connect.reload());
     done();
@@ -93,4 +96,4 @@ gulp.task('html', function () {
 gulp.task('json', function () {
     gulp.src(jsonSources)
         .pipe(connect.reload());
-})
+});
